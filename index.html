@@ -44,10 +44,6 @@
           <a href="#glass" data-nav>Glass</a>
           <a href="#door" data-nav>Door</a>
         </nav>
-        <button class="btn btn-ghost nav-copy" type="button" data-copy="$SIBUBBLE" data-toast="Ticker copied">
-          <span class="nav-copy-full">$SIBUBBLE</span>
-          <span class="nav-copy-short" aria-hidden="true">Copy</span>
-        </button>
         <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
           <span></span>
           <span></span>
@@ -65,7 +61,6 @@
       <a href="#glass">Glass</a>
       <a href="#door">Door</a>
     </nav>
-    <button class="btn btn-primary" type="button" data-copy="$SIBUBBLE" data-toast="Ticker copied">Copy $SIBUBBLE</button>
   </div>
 
   <nav class="dots" aria-label="Sections">
@@ -111,7 +106,6 @@
               Enter the bubble
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <button class="btn btn-ghost" type="button" data-copy="$SIBUBBLE" data-toast="Ticker copied">Copy $SIBUBBLE</button>
           </div>
           <dl class="hero-meta">
             <div>
@@ -301,7 +295,10 @@
           </div>
           <div class="sheet-row" role="row">
             <span role="rowheader">Contract</span>
-            <span role="cell">Coming soon</span>
+            <span role="cell" class="ca-line">
+              <span id="ca-value">Coming soon</span>
+              <button class="btn btn-ghost ca-copy" type="button" data-copy-target="#ca-value">Copy</button>
+            </span>
           </div>
         </div>
         <p class="fine reveal">One billion in the bubble. No tax on the way in or out. The liquidity is burned, the keys are renounced, and the contract address is still on its way.</p>
@@ -365,14 +362,7 @@
           <p class="serif-lead">A pie chart would have popped it.</p>
           <h2 id="glass-title">Tokenomics,<br>told as a bubble.</h2>
         </div>
-        <p class="lede chamber-lede reveal">The joke has numbers. They are printed on the glass, not hidden in a footnote.</p>
-        <ul class="facts reveal" aria-label="Token facts">
-          <li><span>Total supply</span><strong>1B</strong></li>
-          <li><span>Tax</span><strong>0%</strong></li>
-          <li><span>LP</span><strong>Burned</strong></li>
-          <li><span>Ownership</span><strong>Renounced</strong></li>
-          <li><span>CA</span><strong>Coming soon</strong></li>
-        </ul>
+        <p class="lede chamber-lede reveal">The numbers are on the cover sheet. These are just how they sound out loud.</p>
         <div class="chambers">
           <article class="chamber reveal">
             <p class="index">Chamber 01</p>
@@ -425,7 +415,6 @@
             <h3>Say it correctly</h3>
             <p>The door only answers to the full name. Almost-names are other rooms, some of them with the lights off.</p>
             <p class="whisper">Match the ticker</p>
-            <button class="btn btn-ghost step-copy" type="button" data-copy="$SIBUBBLE" data-toast="Ticker copied">Copy $SIBUBBLE</button>
           </li>
           <li class="step reveal">
             <span class="step-no">03</span>
@@ -449,10 +438,6 @@
         <p class="serif-lead">Say it once.</p>
         <h2 id="close-title">The SI Bubble</h2>
         <p class="close-ticker">$SIBUBBLE</p>
-        <button class="btn btn-primary" type="button" data-copy="$SIBUBBLE" data-toast="Ticker copied">
-          Copy the ticker
-          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 5.5V3.75A1.75 1.75 0 0 1 6.75 2h5.5A1.75 1.75 0 0 1 14 3.75v5.5A1.75 1.75 0 0 1 12.25 11H10.5" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="2" y="5" width="8.5" height="8.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
-        </button>
       </div>
     </section>
   </main>

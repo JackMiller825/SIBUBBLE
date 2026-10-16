@@ -78,28 +78,55 @@
     toastTimer = window.setTimeout(() => toast.classList.remove("show"), 1800);
   }
 
+  function isContractAddress(value) {
+    const text = value.trim();
+    if (!text || /coming\s*soon/i.test(text)) return false;
+    if (/^(tba|tbd|pending|n\/a|none|—|-)$/i.test(text)) return false;
+    return text.length >= 32 && !/\s/.test(text);
+  }
+
   async function copyText(text) {
     try {
       await navigator.clipboard.writeText(text);
+      return true;
     } catch (error) {
-      const area = document.createElement("textarea");
-      area.value = text;
-      area.setAttribute("readonly", "");
-      area.style.position = "fixed";
-      area.style.left = "-9999px";
-      document.body.appendChild(area);
-      area.select();
-      document.execCommand("copy");
-      area.remove();
+      try {
+        const area = document.createElement("textarea");
+        area.value = text;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed";
+        area.style.left = "-9999px";
+        document.body.appendChild(area);
+        area.select();
+        const ok = document.execCommand("copy");
+        area.remove();
+        return ok;
+      } catch (fallbackError) {
+        return false;
+      }
     }
   }
 
   document.addEventListener("click", (event) => {
-    const trigger = event.target.closest("[data-copy]");
+    const trigger = event.target.closest("[data-copy], [data-copy-target]");
     if (!trigger) return;
-    const value = trigger.getAttribute("data-copy");
-    copyText(value).then(() => {
-      showToast(trigger.getAttribute("data-toast") || "Copied");
+    let value = trigger.getAttribute("data-copy");
+    let toast = trigger.getAttribute("data-toast") || "Copied";
+    if (trigger.hasAttribute("data-copy-target")) {
+      const node = document.querySelector(trigger.getAttribute("data-copy-target"));
+      value = node ? node.textContent.trim() : "";
+      if (!isContractAddress(value)) {
+        showToast("Contract isn't published yet");
+        return;
+      }
+      toast = "Contract copied";
+    }
+    if (!value) {
+      showToast("Nothing to copy yet");
+      return;
+    }
+    copyText(value).then((ok) => {
+      showToast(ok ? toast : "Couldn't copy");
     });
   });
 
