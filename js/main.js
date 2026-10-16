@@ -111,20 +111,17 @@
 
     if (trigger.hasAttribute("data-copy-target")) {
       const node = document.querySelector(trigger.getAttribute("data-copy-target"));
-      const value = node ? node.dataset.contract || node.textContent.trim() : "";
-      if (!node || !value || value === "Copied") return;
+      const value = node ? node.textContent.trim() : "";
+      if (!value) return;
       copyText(value).then((ok) => {
         if (!ok) {
           showToast("Couldn't copy");
           return;
         }
-        node.dataset.contract = value;
-        node.textContent = "Copied";
         trigger.textContent = "Copied";
         trigger.disabled = true;
         window.clearTimeout(caResetTimer);
         caResetTimer = window.setTimeout(() => {
-          node.textContent = node.dataset.contract;
           trigger.textContent = "Copy";
           trigger.disabled = false;
         }, 3000);
