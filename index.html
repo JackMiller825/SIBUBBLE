@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="images/sibubble-brand-assets/sibubble-logo-transparent.png" fetchpriority="high">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=5">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -296,7 +296,7 @@
           <div class="sheet-row" role="row">
             <span role="rowheader">Contract</span>
             <span role="cell" class="ca-line">
-              <span id="ca-value">Coming soon</span>
+              <span id="ca-value" data-ca="Coming soon">Coming soon</span>
               <button class="btn btn-ghost ca-copy" type="button" data-copy-target="#ca-value">Copy</button>
             </span>
           </div>
@@ -456,6 +456,6 @@
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 </html>

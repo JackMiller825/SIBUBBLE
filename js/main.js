@@ -111,13 +111,14 @@
 
     if (trigger.hasAttribute("data-copy-target")) {
       const node = document.querySelector(trigger.getAttribute("data-copy-target"));
-      const value = node ? node.textContent.trim() : "";
+      const value = node ? (node.getAttribute("data-ca") || node.textContent).trim() : "";
       if (!value) return;
       copyText(value).then((ok) => {
         if (!ok) {
           showToast("Couldn't copy");
           return;
         }
+        if (node.textContent.trim() !== value) node.textContent = value;
         trigger.textContent = "Copied";
         trigger.disabled = true;
         window.clearTimeout(caResetTimer);
