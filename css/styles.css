@@ -1010,6 +1010,46 @@ a, button { -webkit-tap-highlight-color: transparent; }
 
 .chamber-lede { max-width: 46rem; margin-top: 1.2rem; }
 
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.facts li {
+  padding: 0.95rem 1rem 1rem;
+  border-radius: 18px;
+  border: 1px solid var(--line-strong);
+  background:
+    radial-gradient(120px 60px at 100% 0%, rgba(103, 232, 255, 0.12), transparent 70%),
+    rgba(255, 255, 255, 0.03);
+}
+
+.facts li:last-child { grid-column: 1 / -1; }
+
+.facts span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.facts strong {
+  display: block;
+  margin-top: 0.28rem;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 1.7vw, 1.7rem);
+  white-space: nowrap;
+  letter-spacing: -0.045em;
+  color: var(--ink);
+}
+
 .chambers,
 .steps {
   display: grid;
@@ -1221,6 +1261,8 @@ body::before {
 }
 
 @media (min-width: 900px) {
+  .facts { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .facts li:last-child { grid-column: auto; }
   .nav-links { display: flex; gap: 0.85rem; }
   .nav-links a { font-size: 0.86rem; }
   .menu-btn { display: none; }
