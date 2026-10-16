@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#060514">
+  <meta name="description" content="The SI Bubble ($SIBUBBLE) is a playful super-intelligence — a mascot world for the AI market. A brain in glass, over a city of light.">
+  <meta property="og:title" content="The SI Bubble — $SIBUBBLE">
+  <meta property="og:description" content="A playful super-intelligence. AI-market hype, turned into a mascot world.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/sibubble-brand-assets/sibubble-banner-1100x520.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The SI Bubble — $SIBUBBLE">
+  <meta name="twitter:description" content="A playful super-intelligence. A brain in glass, over a city of light.">
+  <meta name="twitter:image" content="images/sibubble-brand-assets/sibubble-banner-1100x520.png">
+  <title>The SI Bubble — $SIBUBBLE</title>
+  <link rel="icon" href="images/sibubble-brand-assets/sibubble-logo-transparent.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/sibubble-brand-assets/sibubble-logo-transparent.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/sibubble-brand-assets/sibubble-logo-transparent.png" fetchpriority="high">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+  <a class="skip" href="#thesis">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <img src="images/sibubble-brand-assets/sibubble-logo-transparent.png" alt="" width="1024" height="1024">
+        <span class="brand-name">The SI Bubble</span>
+      </a>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#thesis" data-nav>Thesis</a>
+          <a href="#mind" data-nav>Mind</a>
+          <a href="#market" data-nav>Market</a>
+          <a href="#marks" data-nav>Marks</a>
+        </nav>
+        <button class="btn btn-ghost nav-copy" type="button" data-copy="$SIBUBBLE" data-toast="Ticker copied">
+          <span class="nav-copy-full">$SIBUBBLE</span>
+          <span class="nav-copy-short" aria-hidden="true">Copy</span>
+        </button>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav aria-label="Mobile">
+      <a href="#thesis">Thesis</a>
+      <a href="#mind">Mind</a>
+      <a href="#market">Market</a>
+      <a href="#marks">Marks</a>
+    </nav>
+    <button class="btn btn-primary" type="button" data-copy="$SIBUBBLE" data-toast="Ticker copied">Copy $SIBUBBLE</button>
+  </div>
+
+  <nav class="dots" aria-label="Sections">
+    <a href="#top" data-nav aria-label="Top"></a>
+    <a href="#thesis" data-nav aria-label="Thesis"></a>
+    <a href="#mind" data-nav aria-label="The mind"></a>
+    <a href="#market" data-nav aria-label="Market"></a>
+    <a href="#marks" data-nav aria-label="Marks"></a>
+  </nav>
+
+  <main>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="aurora"><span></span><span></span><span></span></div>
+        <div class="grid-bg"></div>
+        <canvas id="bubbles"></canvas>
+        <div class="hero-fade"></div>
+      </div>
+      <div class="crops" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="wrap hero-inner">
+        <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> Mascot world for the AI cycle</p>
+        <h1 class="hero-title" id="hero-title">
+          <span class="line"><span>The SI</span></span>
+          <span class="line"><span class="grad">Bubble.</span></span>
+        </h1>
+        <div class="orb-wrap">
+          <div class="orb" id="orb">
+            <span class="ring" aria-hidden="true"></span>
+            <span class="ring ring-b" aria-hidden="true"></span>
+            <span class="sat-spin" aria-hidden="true"><i></i></span>
+            <div class="orb-float">
+              <img src="images/sibubble-brand-assets/sibubble-logo-transparent.png" alt="The SI, a blue brain mascot inside a glowing bubble, pointing the way forward." width="1024" height="1024" fetchpriority="high">
+            </div>
+          </div>
+        </div>
+        <p class="hero-serif">A playful super-intelligence.</p>
+        <div class="hero-copy">
+          <p class="deck">AI-market hype, turned into a mascot world — a brain in glass, a city of light, and a ticker built to be said out loud.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#thesis">
+              Enter the bubble
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <button class="btn btn-ghost" type="button" data-copy="$SIBUBBLE" data-toast="Ticker copied">Copy $SIBUBBLE</button>
+          </div>
+          <dl class="hero-meta">
+            <div>
+              <dt>Narrative</dt>
+              <dd>Playful super-intelligence</dd>
+            </div>
+            <div>
+              <dt>Object</dt>
+              <dd>Brain in glass</dd>
+            </div>
+            <div>
+              <dt>Ticker</dt>
+              <dd>$SIBUBBLE</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <p>The SI Bubble <span></span> $SIBUBBLE <span></span> Super-intelligence <span></span> Brain in glass <span></span> Neon city <span></span> Hold the light <span></span></p>
+        <p>The SI Bubble <span></span> $SIBUBBLE <span></span> Super-intelligence <span></span> Brain in glass <span></span> Neon city <span></span> Hold the light <span></span></p>
+      </div>
+    </div>
+
+    <section class="section" id="thesis" aria-labelledby="thesis-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="index">01 — Thesis</p>
+          <p class="serif-lead">Hype is a material. We shaped it.</p>
+          <h2 id="thesis-title">Abstract trades fade.<br>A face stays in the room.</h2>
+        </div>
+        <div class="split">
+          <p class="reveal">The AI cycle taught the market a new vocabulary — models, agents, capex, super-intelligence. Most of it never becomes an image. It stays a paragraph. Paragraphs do not travel. Pictures do.</p>
+          <p class="reveal">The SI Bubble is that picture, drawn on purpose. A brain with a point of view. A bubble that treats the joke as architecture. A skyline where the charts are just another kind of light. The short version is the ticker: $SIBUBBLE.</p>
+        </div>
+        <div class="principles">
+          <article class="principle reveal">
+            <span class="ghost" aria-hidden="true">01</span>
+            <h3>Recognition</h3>
+            <p>A stranger should be able to redraw it from memory. A brain. A bubble. A grin. That is the test.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="ghost" aria-hidden="true">02</span>
+            <h3>Temperature</h3>
+            <p>Ion cyan, signal magenta, city night. The art runs hot because the cycle is loud. The page around it stays quiet, so the picture can speak.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="ghost" aria-hidden="true">03</span>
+            <h3>Economy</h3>
+            <p>A name, a ticker, a mark, a banner. Small enough to remember. Finished enough for a timeline, a printer, or a billboard.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section mind" id="mind" aria-labelledby="mind-title">
+      <div class="wrap mind-grid">
+        <figure class="studio reveal">
+          <img src="images/sibubble-brand-assets/sibubble-logo-transparent.png" alt="Official circular mark of The SI Bubble." width="1024" height="1024" loading="lazy">
+        </figure>
+        <div class="mind-copy">
+          <p class="index reveal">02 — The mind</p>
+          <h2 id="mind-title" class="reveal">Meet the SI.</h2>
+          <p class="serif-lead reveal">Points the way. Never explains the joke twice.</p>
+          <p class="reveal">The SI lives inside the glass. Lit from within, two hands, no interest in looking worried. The expression is the strategy — playful about super-intelligence, exact about the silhouette.</p>
+          <dl class="spec reveal">
+            <div>
+              <dt>Designation</dt>
+              <dd>The SI</dd>
+            </div>
+            <div>
+              <dt>Class</dt>
+              <dd>Super-intelligence mascot</dd>
+            </div>
+            <div>
+              <dt>Habitat</dt>
+              <dd>Inside the bubble</dd>
+            </div>
+            <div>
+              <dt>Climate</dt>
+              <dd>Neon, clear, a little smug</dd>
+            </div>
+            <div>
+              <dt>Signature</dt>
+              <dd>Points the way</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="cinema" id="world" data-spy-skip aria-labelledby="world-title">
+      <img src="images/sibubble-brand-assets/sibubble-banner-1100x520.png" alt="The SI mascot running inside a bubble above a neon skyline of candlestick towers." width="1100" height="520">
+      <div class="cinema-scrim" aria-hidden="true"></div>
+      <div class="wrap cinema-copy">
+        <p class="index">The world</p>
+        <h2 id="world-title">A city built out of attention.</h2>
+        <p>Candlesticks for weather. Bubbles for thoughts. The mind stays in the glass.</p>
+      </div>
+    </section>
+
+    <section class="section" id="market" aria-labelledby="market-title">
+      <div class="wrap market-grid">
+        <div class="market-sticky">
+          <p class="index">03 — Market</p>
+          <h2 id="market-title">What this cycle is actually buying.</h2>
+          <p class="lede">By October 2026 the AI story is not short of believers. It is short of images people can repeat without a slide.</p>
+        </div>
+        <div class="notes">
+          <article class="note reveal">
+            <p class="index">Note 01</p>
+            <h3>Recall beats jargon</h3>
+            <p>When every launch says intelligence, language stops being a moat. A paragraph of mechanism is forgotten by the next scroll. A brain inside a bubble is not. The trade remembers what it can redraw.</p>
+          </article>
+          <article class="note reveal">
+            <p class="index">Note 02</p>
+            <h3>Culture carries the trade</h3>
+            <p>Infrastructure can be right and still be invisible. Avatars, banners, and a ticker someone types for the pleasure of the word — that is how a cycle actually moves. The SI Bubble is built to be carried.</p>
+          </article>
+          <article class="note reveal">
+            <p class="index">Note 03</p>
+            <h3>Finish is the filter</h3>
+            <p>The category split. One half built terminals. The other half pasted a mascot on a gradient and called it a brand. The open seat is a character treated with the finish of a product house: original art, a point of view, and the discipline to leave fiction off the page.</p>
+          </article>
+          <aside class="field reveal">
+            <p class="index">Field note · 16 October 2026</p>
+            <p>Super-intelligence became a crowded sentence. A bubble is the right container for it — the market’s own joke, redrawn as a place to live. Glass, a city, a grin. That is the whole mnemonic.</p>
+          </aside>
+        </div>
+      </div>
+      <div class="wrap">
+        <blockquote class="pull reveal">
+          <p>When every deck says intelligence, the mark that wins is the one a stranger can redraw from memory.</p>
+        </blockquote>
+      </div>
+      <div class="wrap sheet-block">
+        <div class="reveal">
+          <p class="index">The instrument</p>
+          <h2 class="sheet-heading">The cover sheet.</h2>
+          <p class="lede sheet-lede">Everything published here is a brand fact. Nothing on this page is guessed.</p>
+        </div>
+        <div class="sheet reveal" role="table" aria-label="The SI Bubble cover sheet">
+          <div class="sheet-head">
+            <div>
+              <strong>The SI Bubble</strong>
+              <span>Issued as culture</span>
+            </div>
+            <span class="sheet-code">$SIBUBBLE</span>
+          </div>
+          <div class="sheet-row" role="row">
+            <span role="rowheader">Name</span>
+            <span role="cell">The SI Bubble</span>
+          </div>
+          <div class="sheet-row" role="row">
+            <span role="rowheader">Ticker</span>
+            <span role="cell">$SIBUBBLE</span>
+          </div>
+          <div class="sheet-row" role="row">
+            <span role="rowheader">Narrative</span>
+            <span role="cell">Playful super-intelligence</span>
+          </div>
+          <div class="sheet-row" role="row">
+            <span role="rowheader">Object</span>
+            <span role="cell">Brain, bubble, city</span>
+          </div>
+          <div class="sheet-row" role="row">
+            <span role="rowheader">Voice</span>
+            <span role="cell">Bright, short, a little smug</span>
+          </div>
+          <div class="sheet-row" role="row">
+            <span role="rowheader">Status</span>
+            <span role="cell">Public mark</span>
+          </div>
+        </div>
+        <p class="fine reveal">Chain, contract, and supply belong to a launch announcement. They are not estimated here, and this page will not pretend otherwise.</p>
+      </div>
+    </section>
+
+    <section class="section" id="marks" aria-labelledby="marks-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="index">04 — Marks</p>
+          <p class="serif-lead">Hand this to anyone.</p>
+          <h2 id="marks-title">Three marks.<br>Same city. Same mind.</h2>
+        </div>
+        <div class="bento">
+          <figure class="shot shot-logo reveal">
+            <div class="shot-frame">
+              <img src="images/sibubble-brand-assets/sibubble-logo-transparent.png" alt="Circular transparent logo of The SI Bubble." width="1024" height="1024" loading="lazy">
+            </div>
+            <figcaption><span>Primary mark</span><span>1024 × 1024</span></figcaption>
+          </figure>
+          <aside class="voice reveal">
+            <p class="index">Voice</p>
+            <h3>Bright. Short. A little smug.</h3>
+            <ul>
+              <li><span>Say</span> the bubble, the mind, the city, $SIBUBBLE</li>
+              <li><span>Skip</span> guarantees, invented utility, foggy roadmaps</li>
+            </ul>
+            <p class="voice-note">Warm, never cynical about the people inside the bubble. The grin is the posture. The shout is not.</p>
+          </aside>
+          <figure class="shot shot-wide reveal">
+            <div class="shot-frame">
+              <img src="images/sibubble-brand-assets/sibubble-banner-3to1.png" alt="Wide banner: The SI Bubble wordmark beside the mascot flying over a neon city." width="1500" height="500" loading="lazy">
+            </div>
+            <figcaption><span>Wide banner</span><span>1500 × 500</span></figcaption>
+          </figure>
+          <figure class="shot shot-tg reveal">
+            <div class="shot-frame">
+              <img src="images/sibubble-brand-assets/sibubble-banner-1100x520.png" alt="Timeline banner of The SI Bubble over a reflective neon skyline." width="1100" height="520" loading="lazy">
+            </div>
+            <figcaption><span>Timeline banner</span><span>1100 × 520</span></figcaption>
+          </figure>
+        </div>
+        <div class="palette reveal">
+          <p class="index">Drawn from the art</p>
+          <ul class="swatches">
+            <li><button type="button" data-copy="#67E8FF" data-toast="Ion cyan copied"><i style="background:#67E8FF"></i><span>Ion</span><small>#67E8FF</small></button></li>
+            <li><button type="button" data-copy="#38BDF8" data-toast="Signal blue copied"><i style="background:#38BDF8"></i><span>Signal</span><small>#38BDF8</small></button></li>
+            <li><button type="button" data-copy="#E879F9" data-toast="Magenta copied"><i style="background:#E879F9"></i><span>Magenta</span><small>#E879F9</small></button></li>
+            <li><button type="button" data-copy="#F472B6" data-toast="Pink copied"><i style="background:#F472B6"></i><span>Pink</span><small>#F472B6</small></button></li>
+            <li><button type="button" data-copy="#060514" data-toast="Night copied"><i style="background:#060514"></i><span>Night</span><small>#060514</small></button></li>
+            <li><button type="button" data-copy="#F4F7FF" data-toast="Cloud copied"><i style="background:#F4F7FF"></i><span>Cloud</span><small>#F4F7FF</small></button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="close" id="enter" data-spy-skip aria-labelledby="close-title">
+      <div class="wrap">
+        <img class="close-mark" src="images/sibubble-brand-assets/sibubble-logo-transparent.png" alt="" width="1024" height="1024">
+        <p class="serif-lead">Say it once.</p>
+        <h2 id="close-title">The SI Bubble</h2>
+        <p class="close-ticker">$SIBUBBLE</p>
+        <button class="btn btn-primary" type="button" data-copy="$SIBUBBLE" data-toast="Ticker copied">
+          Copy the ticker
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 5.5V3.75A1.75 1.75 0 0 1 6.75 2h5.5A1.75 1.75 0 0 1 14 3.75v5.5A1.75 1.75 0 0 1 12.25 11H10.5" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="2" y="5" width="8.5" height="8.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#top">
+          <img src="images/sibubble-brand-assets/sibubble-logo-transparent.png" alt="" width="1024" height="1024">
+          <span>The SI Bubble</span>
+        </a>
+        <p class="disclaimer">The SI Bubble ($SIBUBBLE) is a mascot and cultural token brand. This site is a visual introduction. It is not an offer to sell a security, not a solicitation, not investment, financial, or legal advice, and not a promise of performance or listing. Digital assets are volatile and can go to zero. Nothing here is a contract address, a supply figure, or a market price.</p>
+      </div>
+      <p class="footer-meta">© <span id="year">2026</span> The SI Bubble<br>$SIBUBBLE</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

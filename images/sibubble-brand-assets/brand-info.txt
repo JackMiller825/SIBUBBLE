@@ -1,0 +1,8 @@
+Name: The SI Bubble
+Ticker: $SIBUBBLE
+Narrative: A playful super-intelligence bubble, turning AI-market hype into a bright, expressive mascot world.
+
+Assets:
+- sibubble-logo-transparent.png — 1024 x 1024 circular transparent logo
+- sibubble-banner-3to1.png — 1500 x 500 wide banner
+- sibubble-banner-1100x520.png — 1100 x 520 Telegram banner

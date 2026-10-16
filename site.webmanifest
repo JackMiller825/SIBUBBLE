@@ -1,0 +1,17 @@
+{
+  "name": "The SI Bubble",
+  "short_name": "$SIBUBBLE",
+  "description": "A playful super-intelligence. The mascot world for the AI cycle.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#060514",
+  "theme_color": "#060514",
+  "icons": [
+    {
+      "src": "images/sibubble-brand-assets/sibubble-logo-transparent.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
