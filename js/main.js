@@ -78,55 +78,67 @@
     toastTimer = window.setTimeout(() => toast.classList.remove("show"), 1800);
   }
 
-  function isContractAddress(value) {
-    const text = value.trim();
-    if (!text || /coming\s*soon/i.test(text)) return false;
-    if (/^(tba|tbd|pending|n\/a|none|—|-)$/i.test(text)) return false;
-    return text.length >= 32 && !/\s/.test(text);
-  }
-
   async function copyText(text) {
     try {
-      await navigator.clipboard.writeText(text);
-      return true;
-    } catch (error) {
-      try {
-        const area = document.createElement("textarea");
-        area.value = text;
-        area.setAttribute("readonly", "");
-        area.style.position = "fixed";
-        area.style.left = "-9999px";
-        document.body.appendChild(area);
-        area.select();
-        const ok = document.execCommand("copy");
-        area.remove();
-        return ok;
-      } catch (fallbackError) {
-        return false;
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return true;
       }
+    } catch (error) {
+      /* Fall through to the selection copy. */
+    }
+    try {
+      const area = document.createElement("textarea");
+      area.value = text;
+      area.setAttribute("readonly", "");
+      area.style.cssText = "position:fixed;top:0;left:0;width:1px;height:1px;padding:0;border:0;outline:none;opacity:0;";
+      document.body.appendChild(area);
+      area.focus();
+      area.select();
+      area.setSelectionRange(0, text.length);
+      const ok = document.execCommand("copy");
+      area.remove();
+      return ok;
+    } catch (fallbackError) {
+      return false;
     }
   }
 
+  let caResetTimer = 0;
   document.addEventListener("click", (event) => {
     const trigger = event.target.closest("[data-copy], [data-copy-target]");
-    if (!trigger) return;
-    let value = trigger.getAttribute("data-copy");
-    let toast = trigger.getAttribute("data-toast") || "Copied";
+    if (!trigger || trigger.disabled) return;
+
     if (trigger.hasAttribute("data-copy-target")) {
       const node = document.querySelector(trigger.getAttribute("data-copy-target"));
-      value = node ? node.textContent.trim() : "";
-      if (!isContractAddress(value)) {
-        showToast("Contract isn't published yet");
-        return;
-      }
-      toast = "Contract copied";
+      const value = node ? node.dataset.contract || node.textContent.trim() : "";
+      if (!node || !value || value === "Copied") return;
+      copyText(value).then((ok) => {
+        if (!ok) {
+          showToast("Couldn't copy");
+          return;
+        }
+        node.dataset.contract = value;
+        node.textContent = "Copied";
+        trigger.textContent = "Copied";
+        trigger.disabled = true;
+        window.clearTimeout(caResetTimer);
+        caResetTimer = window.setTimeout(() => {
+          node.textContent = node.dataset.contract;
+          trigger.textContent = "Copy";
+          trigger.disabled = false;
+        }, 3000);
+      });
+      return;
     }
+
+    const value = trigger.getAttribute("data-copy");
     if (!value) {
       showToast("Nothing to copy yet");
       return;
     }
     copyText(value).then((ok) => {
-      showToast(ok ? toast : "Couldn't copy");
+      showToast(ok ? trigger.getAttribute("data-toast") || "Copied" : "Couldn't copy");
     });
   });
 

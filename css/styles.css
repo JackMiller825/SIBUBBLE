@@ -897,6 +897,12 @@ a, button { -webkit-tap-highlight-color: transparent; }
   padding: 0 0.9rem;
 }
 
+.ca-copy:disabled {
+  color: var(--ink);
+  opacity: 1;
+  cursor: default;
+}
+
 .fine {
   margin-top: 1rem;
   max-width: 62ch;
